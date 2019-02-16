@@ -4,6 +4,8 @@ Example image of what a Niko Niko Calendar can look like, this is not meant as a
 
 ![](https://www.agilealliance.org/wp-content/uploads/2015/12/Niko-NikoCalendar.png)
 
+Here is a bit of general information: https://www.agilealliance.org/glossary/nikoniko/
+
 Here are the minimum requirements. You don't have to do anymore but feel free to add what you like. **How you accomplish the basic requirements is the most important part.**
 If you feel like there's room for interpretation (that is, there are not enough details given) just pick an option you like.
 
