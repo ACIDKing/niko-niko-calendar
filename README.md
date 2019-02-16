@@ -1,6 +1,7 @@
 ## Simple Niko-Niko calendar
 
 Example image of what a Niko Niko Calendar can look like, this is not meant as a wireframe!
+
 ![](https://www.agilealliance.org/wp-content/uploads/2015/12/Niko-NikoCalendar.png)
 
 Here are the minimum requirements. You don't have to do anymore but feel free to add what you like. **How you accomplish the basic requirements is the most important part.**
