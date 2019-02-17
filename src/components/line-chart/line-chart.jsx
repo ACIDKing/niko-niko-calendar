@@ -1,3 +1,3 @@
 import React from 'react'
 
-export const LineChart = () => <>Line Chart</>
+export const LineChart = () => <div>Line Chart</div>
