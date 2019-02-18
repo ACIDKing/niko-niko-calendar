@@ -7,8 +7,8 @@ export const SPRINT_WORKING_DAYS = getSprintWorkingDays(WORKING_DAYS, SPRINT_DUR
 export const EMOJI_OPTIONS = [
   {
     label: '😄',
-    value: 2,
+    value: 3,
   },
-  { label: '😐', value: 1 },
-  { label: '😡', value: 0 },
+  { label: '😐', value: 2 },
+  { label: '😡', value: 1 },
 ]
