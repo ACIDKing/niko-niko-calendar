@@ -1,3 +1,7 @@
 import React from 'react'
 
-export const LineChart = () => <div>Line Chart</div>
+export const LineChart = ({ currentSprint }) => (
+  <h2>
+    <code>{JSON.stringify(currentSprint)}</code>
+  </h2>
+)

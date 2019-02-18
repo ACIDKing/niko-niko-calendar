@@ -8,12 +8,7 @@ const fakeSprints = [
   {
     id: uniqid(),
     number: 1,
-    team: [
-      { id: uniqid(), name: 'Tom' },
-      { id: uniqid(), name: 'Jerry' },
-      { id: uniqid(), name: 'Spike' },
-      { id: uniqid(), name: 'Viacheslav Ignatov' },
-    ],
+    team: [{ id: uniqid(), name: 'Tom' }, { id: uniqid(), name: 'Jerry' }, { id: uniqid(), name: 'Spike' }],
   },
 ]
 export const MainContainer = () => {
@@ -24,7 +19,7 @@ export const MainContainer = () => {
     <Flex justifyContent="center">
       <Flex flexDirection="column" width={3 / 4}>
         <Table sprint={currentSprint} setCurrentSprint={setCurrentSprint} />
-        <LineChart />
+        <LineChart currentSprint={currentSprint} />
       </Flex>
     </Flex>
   )
