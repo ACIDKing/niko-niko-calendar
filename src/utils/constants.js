@@ -12,3 +12,9 @@ export const EMOJI_OPTIONS = [
   { label: '😐', value: 2 },
   { label: '😡', value: 1 },
 ]
+
+export const MoodLabelMap = {
+  3: '😄',
+  2: '😐',
+  1: '😡',
+}
