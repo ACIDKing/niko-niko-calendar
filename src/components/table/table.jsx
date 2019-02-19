@@ -14,6 +14,7 @@ const StyledTable = styled.table`
 
 const Th = styled.th`
   border: 1px solid black;
+  background-color: lightgray;
 `
 
 const Tr = styled.tr`
@@ -48,10 +49,6 @@ const TeamMemberCell = ({ sprint, setCurrentSprint, member, day }) => {
     <Td>
       <StyledSelect
         value={selectedOption}
-        components={{
-          DropdownIndicator: () => null,
-          IndicatorSeparator: () => null,
-        }}
         options={EMOJI_OPTIONS}
         isSearchable={false}
         placeholder={null}
