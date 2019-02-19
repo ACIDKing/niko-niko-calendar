@@ -33,7 +33,7 @@ const StyledSelect = styled(Select)`
 
 const TeamMemberCell = ({ sprint, setCurrentSprint, member, day }) => {
   const [selectedOption, setSelectedOption] = useState(
-    member[day] !== undefined ? EMOJI_OPTIONS.filter(option => option.value === member[day]) : { label: '', value: '' },
+    member[day] ? EMOJI_OPTIONS.filter(option => option.value === member[day]) : {},
   )
 
   useEffect(() => {
@@ -57,6 +57,7 @@ const TeamMemberCell = ({ sprint, setCurrentSprint, member, day }) => {
     </Td>
   )
 }
+
 export const Table = ({ sprint, setCurrentSprint, sprint: { team } }) => (
   <StyledTable>
     <tbody>

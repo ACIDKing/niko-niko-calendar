@@ -10,7 +10,7 @@ const CustomTooltip = ({ payload, label, active }) => {
         <p className="label">
           <b>Average mood on {`${label}`}:</b>
         </p>
-        <Flex fontSize="2rem" justifyContent="center">{`<< ${MoodLabelMap[payload[0].payload.avg]} >>`}</Flex>
+        <Flex fontSize="2rem" justifyContent="center">{`${MoodLabelMap[payload[0].payload.avg]}`}</Flex>
       </div>
     )
   }
@@ -53,9 +53,6 @@ export const LineChart = ({ currentSprint }) => {
           />
         </LC>
       </ResponsiveContainer>
-      <h2>
-        <code>{JSON.stringify(currentSprint)}</code>
-      </h2>
     </>
   )
 }
