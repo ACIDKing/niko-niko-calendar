@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Select from 'react-select'
 
@@ -28,46 +28,33 @@ const Td = styled.td`
 `
 
 const StyledSelect = styled(Select)`
-  font-size: 2rem;
+  font-size: 1.4rem;
 `
 
-const TeamMemberCell = ({ sprint, setCurrentSprint, member, day }) => {
-  const [selectedOption, setSelectedOption] = useState(
-    member[day] ? EMOJI_OPTIONS.filter(option => option.value === member[day]) : {},
-  )
-
-  useEffect(() => {
-    setCurrentSprint({
-      ...sprint,
-      team: sprint.team.map(m =>
-        m.id === member.id && selectedOption.value !== '' ? { ...m, [day]: selectedOption.value } : m,
-      ),
-    })
-  }, [selectedOption.value])
-
+const TeamMemberCell = ({ onTeamMemberUpdate, member, day }) => {
   return (
     <Td>
       <StyledSelect
-        value={selectedOption}
+        value={member[day] ? EMOJI_OPTIONS.filter(option => option.value === member[day]) : {}}
         options={EMOJI_OPTIONS}
         isSearchable={false}
         placeholder={null}
-        onChange={selectedOption => setSelectedOption(selectedOption)}
+        onChange={selectedOption => onTeamMemberUpdate(member.id, { [day]: selectedOption.value })}
       />
     </Td>
   )
 }
 
-export const Table = ({ sprint, setCurrentSprint, sprint: { team } }) => (
+export const Table = ({ sprint, onTeamMemberUpdate }) => (
   <StyledTable>
     <tbody>
       <Tr>
-        <Th>Sprint {sprint.number}</Th>
+        <Th>Sprint #{sprint.number + 1}</Th>
         {SPRINT_WORKING_DAYS.map((day, index) => (
           <Th key={`${day}-${index}`}>{day}</Th>
         ))}
       </Tr>
-      {team.map(member => {
+      {sprint.team.map(member => {
         return (
           <Tr key={member.id}>
             <Td>{member.name}</Td>
@@ -76,7 +63,7 @@ export const Table = ({ sprint, setCurrentSprint, sprint: { team } }) => (
                 key={day + index}
                 day={day + index}
                 sprint={sprint}
-                setCurrentSprint={setCurrentSprint}
+                onTeamMemberUpdate={onTeamMemberUpdate}
                 member={member}
               />
             ))}

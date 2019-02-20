@@ -18,9 +18,9 @@ const CustomTooltip = ({ payload, label, active }) => {
   return null
 }
 
-export const LineChart = ({ currentSprint }) => {
+export const LineChart = ({ sprint }) => {
   const data = SPRINT_WORKING_DAYS.map((day, index) => ({
-    avg: getAvgTeamMood(day + index, currentSprint.team),
+    avg: getAvgTeamMood(day + index, sprint.team),
     day,
   }))
 
