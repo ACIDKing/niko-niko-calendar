@@ -27,11 +27,11 @@ const Td = styled.td`
   border: 1px solid black;
 `
 
-const StyledSelect = styled(Select)`
+export const StyledSelect = styled(Select)`
   font-size: 1.4rem;
 `
 
-const TeamMemberCell = ({ onTeamMemberUpdate, member, day }) => {
+export const TeamMemberCell = ({ onTeamMemberUpdate, member, day }) => {
   return (
     <Td>
       <StyledSelect
