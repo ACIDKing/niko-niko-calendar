@@ -17,14 +17,17 @@ _P.S. If you want to change some variables (e.g. SPRINT_DURATION which can set t
 * You can add a new one team member by using this button (please note, that it's available only for active sprint)
 
 ![](./public/add_new_team_member.png)
+
 * After adding the team members you can fill the table according to their feedback. The LineChart will show the average team mood in real time
 
 ![](./public/set_up_mood.png)
+
 * By clicking **Next** button you can create a new sprint. Current team will be linked to the next sprint and the previous one will be marked as inactive (This means that you won't be able to add new members and their feedback to it)
 
 ![](./public/new_sprint.png)
 
 * By clicking **Prev** button you can return back to the previous sprints and see stored information about your teammates
+
 ##Task
 The task is to build a simple Niko-Niko calendar. Here is a bit of general information: https://www.agilealliance.org/glossary/nikoniko/
 Example image of what a Niko Niko Calendar can look like, this is not meant as a wireframe!
