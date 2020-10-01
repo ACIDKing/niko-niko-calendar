@@ -1,6 +1,6 @@
 # Simple Niko-Niko calendar
 
-##Instructions
+## Instructions
 
 Here are the instructions for running this application:
 
@@ -13,7 +13,7 @@ Here are the instructions for running this application:
 
 _P.S. If you want to change some variables (e.g. SPRINT_DURATION which can set the duration of sprints in **src\utils\constants.js**) just re-build it again and rerun (step 3 and 4 above) or just run development mode using `npm run start-dev`_
 
-###What this application can do
+### What this application can do
 * You can add a new one team member by using this button (please note, that it's available only for active sprint)
 
 ![](./public/add_new_team_member.png)
